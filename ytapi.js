@@ -14,6 +14,7 @@
 	 .then(data => {
 		 console.log(data);
 		 subCount.innerHTML = data["items"][0].statistics.subscriberCount;
+		 subCount1.innerHTML = data["items"][0].statistics.subscriberCount;
 	 })
 
  }
