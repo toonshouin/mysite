@@ -2,7 +2,7 @@
  const youtubeKey = 'AIzaSyB-GAzFAC5AQlDmBHfotKCQwGnZmag0UlU';
  const youtubeUser = 'UCQUBBBEQgDxnFTd52UtjSTg';
  const subCount = document.getElementById('subCount');
- const subCount1 = document.getElementById('subCount');
+ const subCount1 = document.getElementById('subCount1');
  const delay = 1000; // 10 min
 
  let getSubscribers = () => {
