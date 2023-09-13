@@ -55,7 +55,7 @@ header{
     z-index: 1;
     width: 100%;
     position: fixed;
-    background-color:#f1d2d4;
+    background-color: #f8d0d1;
 }
 .logo{
     cursor:pointer
@@ -70,24 +70,24 @@ header{
 .nav_links li a{
     transition:all .3s ease 0s
 }
-.nav_links li a:hover{
-    color:#0088a0
+.nav_links li a:hover{  
+    color:#d29ba0
 }
 button{
     padding:9px 25px;
-    background-color:#b2edef;
+    background-color:#d7a1a7;
     border:none;
     border-radius:50px;
     cursor:pointer;
     transition:all .3s ease 0s
 }
 button:hover{
-    background-color:#0088a9
+    background-color:#d29ba0
 }
 body{
     font-family:"Itim",sans-serif;
     font-weight:400;
-    background-color:#f1d2d4;
+    background-color:#f8d0d1;
     height: 100vh
 }
 h3{
@@ -234,7 +234,7 @@ footer{
 }
 
 .overlay a:hover, .overlay a:focus {
-    color: #0088a9;
+    color: #d29ba0;
 }
 .overlay .close {
     position: absolute;
