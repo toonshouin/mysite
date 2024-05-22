@@ -48,13 +48,19 @@ li,a,button{
     text-decoration:none
 }
 header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000
+}
+.navbar{
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:30px 10%;
     z-index: 1;
     width: 100%;
-    position: fixed;
     background-color: #f8d0d1;
 }
 .logo{

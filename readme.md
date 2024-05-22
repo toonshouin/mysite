@@ -1,4 +1,6 @@
-# Introducting The new ToonStoryTime's Website.
+# ‼️ This site going to have a new look , and also using new programming language soon. And all the info won't update anymore. So, stay tuned. ‼️
+
+# Introducting , ToonStoryTime's Website.
 
 ![Image of the new website.](preview/screenshot.png)
 
