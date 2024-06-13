@@ -1,5 +1,6 @@
 <script>
     import { fade } from 'svelte/transition';
+    import "../app.css";
 </script>
 
 <style>
@@ -15,8 +16,8 @@
     }
 </style>
 
-<div class="container" transition:fade>
-    <h1>Welcome to My  and yep, new site!</h1>
+<div class="container mx-auto px-auto" transition:fade>
+    <h1 class="text-3xl font-bold underline">Welcome to My new site!</h1>
     <p>This is the home page.</p>
     <p class="link"><a href="/about">Go to About Page</a></p>
     <p>Some temporary string here!</p>
