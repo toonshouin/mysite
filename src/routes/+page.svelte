@@ -3,16 +3,6 @@
 
     let isVisible = false;
 
-    /**
-	 * @param {{ key: string; preventDefault: () => void; }} event
-	 */
-    function handleKeydown(event) {
-    if (event.key === 'Enter' || event.key === ' ') {
-      toggleHiddenRow();
-      event.preventDefault();  // Prevent default scrolling behavior for space key
-    }
-  }
-
 function toggleHiddenRow() {
   isVisible = !isVisible;
 }
@@ -39,7 +29,7 @@ function toggleHiddenRow() {
     <div class="inline">
       <span class="text-3xl font-bold">Hi! 👋</span>
       <span class="text-xl">ToonStoryTime (ToonNongAeoy) have been reconstruct this site recently! And finally ready to operate again!</span>
-      <span role="button" on:click={toggleHiddenRow} on:keydown={handleKeydown} class="cursor-pointer" tabindex="0">(Click here to read about the changes.)</span>
+      <span on:click={toggleHiddenRow} class="cursor-pointer">(Click here to read about the changes.)</span>
     </div>
     <div id="st" class={`mt-2 mb-2 ${isVisible ? 'block' : 'hidden'}`}>
       <p>
