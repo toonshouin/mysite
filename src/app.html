@@ -7,6 +7,25 @@
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
+		<div class="flex flex-col w-full mx-auto h-auto max-w-3xl box-content mt-8" style="line-height: normal;">
+			<img class="z-1 max-w-3xl" src="%sveltekit.assets%/banner.png" />
+			<div class="max-w-3xl w-full h-auto rounded-b-3xl pb-2 -mt-8" style="background-color: #FFEBB7;">
+				%sveltekit.body%
+			</div>
+		</div>
+		<footer class="flex justify-center">
+			<div class="justify-center text-center mt-5 max-w-3xl">
+			<p>
+				★ 2013 - 2024 StoryHouse Production ★ 
+				v2 layout since xx.xx.xx // prev: <a href="https://v1.toonstorytime.me">v1 (Whistler)</a> ★<br>
+				mail to <b>contact (at) toonstorytime.me!</b>
+			</p>
+			<br>
+			<p class="mb-8">
+				Eichi Tenshouin and related materials are trademarks of Happy Elements K.K<br>
+				Raiden Shogun and related materials are trademarks of miHoYo Co., Ltd.<br>
+			</p>
+		</div>
+		</footer>
 	</body>
 </html>

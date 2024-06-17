@@ -1,6 +1,5 @@
 <script>
     import { fade } from 'svelte/transition';
-    import "../../app.css";
 </script>
 
 <style>
@@ -15,9 +14,10 @@
         text-decoration: underline;
     }
 </style>
-
-<div class="container" transition:fade>
+<div class="flex justify-center" transition:fade>
+<div class="container">
     <h1>About This Website</h1>
     <p>This is the about page.</p>
     <p class="link"><a href="./">Go to Home Page</a></p>
+</div>
 </div>
