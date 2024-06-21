@@ -17,6 +17,7 @@
   let commitMessage = 'Loading...';
   let commitDate = '';
   let commitURI = 'https://github.com/toonnongaeoy/mysite'
+  let feed = [];
 
   const branch = 'v2-dev';  // specify the branch you want to fetch commits from
   const owner = 'toonnongaeoy';
@@ -34,9 +35,42 @@
     return `${day}/${month}/${year}`;
   }
 
+  async function fetchRSSFeed() {
+    const feedUrl = 'https://blog.toonstorytime.me/rss.xml';
+    const response = await fetch(feedUrl);
+    const text = await response.text();
+    feed = parseXMLToJSON(text);
+    // Sort by pubDate in descending order and take the top 3
+    feed.sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      if (isNaN(dateA.getTime()) || isNaN(dateB.getTime())) {
+        return 0; // Return 0 to maintain the original order if either date is invalid
+      }
+      return dateB.getTime() - dateA.getTime();
+    });
+    feed = feed.slice(0, 3);
+  }
+
+    // Function to format date to DD/MM/YYYY
+    /**
+	 * @param {string} xml
+	 */
+  function parseXMLToJSON(xml) {
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(xml, 'text/xml');
+    const items = xmlDoc.querySelectorAll('item');
+    return Array.from(items).map(item => ({
+      title: item.querySelector('title')?.textContent,
+      link: item.querySelector('link')?.textContent,
+      date: formatDate(item.querySelector('pubDate')?.textContent ?? ''),
+    }));
+  }
+
 // Fetch the latest commit message and date on component mount
 onMount(async () => {
     try {
+      fetchRSSFeed();
       const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/commits?sha=${branch}`);
       if (response.ok) {
         const data = await response.json();
@@ -102,27 +136,12 @@ function toggleHiddenRow() {
     <div class={`m-3 h-0.5 divider`}> </div>
     <div class="flex flex-row justify-center">
       <div class="flex flex-col justify-center items-center text-center mr-4">
-        <p>current feeling :</p>
-          <img src="https://moods.imood.com/display/uname-toonnongaeoy/fg-FFFFFF/trans-1/imood.gif" width="72" style="padding:3px; padding-bottom:5px; margin-bottom:1px; background-color: #e34c2d; border:3px double #FFF2C9;">
-      </div>
-      <div class="flex flex-col mr-4 mt-0.5">
-        <div id="webring-wrapper">
-          <a href="https://webring.hackclub.com/" id="previousBtn" class="webring-anchor" title="Previous">‹</a>
-          <a href="https://webring.hackclub.com/" class="webring-logo" title="Hack Club Webring" alt="Hack Club Webring"></a>
-          <a href="https://webring.hackclub.com/" id="nextBtn" class="webring-anchor" title="Next">›</a>
-          <script src="https://webring.hackclub.com/embed.min.js"></script>
-        </div>                
-      </div>
-      <div class="flex flex-col">
-        <a href="https://webring.wonderful.software#YOUR.DOMAIN" title="วงแหวนเว็บ">
-          <img
-            alt="วงแหวนเว็บ"
-            width="36"
-            height="36"
-            src="https://webring.wonderful.software/webring.black.svg"
-            style="margin-top: 3px;"
-          />
-        </a>
+        <span>Since koinuko closed her Webring, and I forget the password. And it should be her webring here. So, enjoy my blog updates!</span>
+        {#each feed as { title, link, date }}
+        <div>
+          <a href="{link}" target="_blank">{date} : {title}</a>
+        </div>
+      {/each}
       </div>
     </div>
       
