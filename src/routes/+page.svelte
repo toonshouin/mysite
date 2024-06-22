@@ -17,7 +17,13 @@
   let commitMessage = 'Loading...';
   let commitDate = '';
   let commitURI = 'https://github.com/toonnongaeoy/mysite'
-  let feed = [];
+  let feed = [
+    {
+      "title": "Do you remember? The 21st night of September?",
+      "link": "https://youtu.be/Gs069dndIYk",
+      "date": "21/09/1978"
+    },
+  ]
 
   const branch = 'v2-dev';  // specify the branch you want to fetch commits from
   const owner = 'toonnongaeoy';
@@ -70,7 +76,7 @@
 // Fetch the latest commit message and date on component mount
 onMount(async () => {
     try {
-      fetchRSSFeed();
+      // fetchRSSFeed();
       const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/commits?sha=${branch}`);
       if (response.ok) {
         const data = await response.json();
@@ -136,15 +142,15 @@ function toggleHiddenRow() {
     <div class={`m-3 h-0.5 divider`}> </div>
     <div class="flex flex-row justify-center">
       <div class="flex flex-col justify-center items-center text-center mr-4">
-        <span>Since koinuko closed her Webring, and I forget the password. And it should be her webring here. So, enjoy my blog updates!</span>
+        <span>Since koinuko closed her Webring, and I forget the password. And it should be her webring here. So, enjoy my blog updates instead!</span>
+        <span>&nbsp;</span>
         {#each feed as { title, link, date }}
         <div>
-          <a href="{link}" target="_blank">{date} : {title}</a>
+          <a href="{link}" target="_blank"><b>{date} :</b> {title}</a>
         </div>
       {/each}
       </div>
     </div>
-      
     <div class={`m-3 h-0.5 divider`}> </div>
     <div class="inline">
       <span class="font-bold">Last Update ({commitDate}) : </span>
