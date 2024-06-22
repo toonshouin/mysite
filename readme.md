@@ -1,22 +1,26 @@
-# Introducting , ToonStoryTime's Website.
+# Introducting , ToonStoryTime (ToonNongAeoy)'s Website.
 
 ![Image of the new website.](preview/screenshot.png)
 
-## Redesigned with ❤️ by Cartoon Kritthapath Yaviraj
+## Redesigned with ❤️ by Cartoon Kritthapath Yaviraj Based on [koinuko.pink](https://koinuko.pink)
 
-Based on HTML , CSS and some JavaScripts.
+Based on Svelte using [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte) that based on Vite.
 
-Predecessor of another dead project like [CartoonLove****Kung's Website](https://github.com/StoryHouseProduction/CartoonLove.Website)
+Predecessor of my another (retro) site : [`my-other-site`](https://github.com/toonnongaeoy/my-other-site) ([toonnongaeoy.dino.icu](https://toonnongaeoy.dino.icu))
 
 ## Features
 - Mobile Support.
 - Modern look design.
-- Realtime Subscriber count. (with 808 bytes per request)
-- Lightweight (Around 10 kb.)
+- Realtime Subscriber count.
+- Fetch Commits from Github Repo using Github API.
+- Fetch RSS
 - Github Codespaces Support. (With all the basic extenstion you need.)
 
 ## Setting up
-Just clone and throw onto your web server of your choice and it's ready to go.
+First, Install all the Dependency by running this command.
+``npm install``
+
+and then 
 
 ## Github Codespace Support
 This project now have Github Codespace Support with All the basic extenstion you need to use for this project.

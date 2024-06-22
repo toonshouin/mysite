@@ -17,6 +17,9 @@
   let commitMessage = 'Loading...';
   let commitDate = '';
   let commitURI = 'https://github.com/toonnongaeoy/mysite'
+  $: commitGUI_URI = `https://github.com/toonnongaeoy/${repo}/commits/${branch}`;
+  let commitUser_URI = 'https://github.com/toonnongaeoy';
+  let commitUser = 'toonnongaeoy';
   let feed = [
     {
       "title": "Do you remember? The 21st night of September?",
@@ -83,6 +86,8 @@ onMount(async () => {
         commitMessage = data[0].commit.message;
         commitDate = formatDate(data[0].commit.author.date);
         commitURI = data[0].html_url;
+        commitUser = data[0].author.login;
+        commitUser_URI = data[0].author.html_url;
       } else {
         commitMessage = 'Error fetching commit data';
         commitDate = '';
@@ -91,6 +96,13 @@ onMount(async () => {
       commitMessage = 'Error fetching commit data';
       commitDate = '';
     }
+    const script = document.createElement('script');
+    script.src = 'https://webring.hackclub.com/embed.min.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Return the cleanup function directly
+    return;
   });
 
 function toggleHiddenRow() {
@@ -113,12 +125,18 @@ function toggleHiddenRow() {
     background-image : linear-gradient(to right, rgba(255,0,0,0), 
 	rgba(223, 152, 156, 1), rgba(255,0,0,0));
     }
+
+    @media (max-width: 430px) {
+        .webring-wrapper {
+            max-width: 50px;
+        }
+    }
 </style>  
 <div class="flex justify-center" transition:fade>
   <div class="container mx-auto px-4">
     <div class="inline">
       <span class="text-3xl font-bold">Hi! 👋</span>
-      <span class="text-xl">ToonStoryTime (ToonNongAeoy) have been reconstruct this site recently! And finally ready to operate again!</span>
+      <span class="text-xl">ToonStoryTime (ToonNongAeoy) have been reconstruct this site recently! And (almost) finally ready to operate again!</span>
       <span role="button" on:click={toggleHiddenRow} on:keydown={handleKeydown} class="cursor-pointer" tabindex="0">(Click here to read about the changes.)</span>
     </div>
     <div id="st" class={`mt-2 mb-2 ${isVisible ? 'block' : 'hidden'}`}>
@@ -152,11 +170,69 @@ function toggleHiddenRow() {
       </div>
     </div>
     <div class={`m-3 h-0.5 divider`}> </div>
-    <div class="inline">
-      <span class="font-bold">Last Update ({commitDate}) : </span>
-      <span><a href={commitURI}>{commitMessage}</a></span>
+    <div class="text-center mt-2">
+      <div class="inline">
+        <span class="font-bold">Last Update ({commitDate}) : </span>
+        <span><a href={commitURI}>{commitMessage}</a></span> <span class="font-bold"><a href={commitUser_URI}>({commitUser})</a></span>
+      </div>
     </div>
+    <p class="font-bold text-center mt-2"><a href={commitGUI_URI}>[Update Log]</a></p>
     <div class={`m-3 h-0.5 divider`}> </div>
-    
+    <div class="flex flex-row">
+      <div class="flex flex-col items-center max-w-32 text-center mr-4">
+        <p>current feeling :</p>
+        <img src="https://moods.imood.com/display/uname-toonnongaeoy/fg-FFFFFF/trans-1/imood.gif" width="72" style="padding:3px; padding-bottom:5px; margin-bottom:1px; background-color: #e34c2d; border:3px double #FFF2C9;">
+        <div id="webring-wrapper" class="webring-wrapper">
+          <a href="https://webring.hackclub.com/" id="previousBtn" class="webring-anchor" title="Previous">‹</a>
+          <a href="https://webring.hackclub.com/" class="webring-logo" title="Hack Club Webring" alt="Hack Club Webring"></a>
+          <a href="https://webring.hackclub.com/" id="nextBtn" class="webring-anchor" title="Next">›</a>
+        </div>
+        <div class="flex flex-col mt-2 max-w-9">
+          <a href="https://webring.wonderful.software#YOUR.DOMAIN" title="วงแหวนเว็บ">
+            <img alt="วงแหวนเว็บ" src="https://webring.wonderful.software/webring.black.svg"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col mr-4">
+        <div class="inline">
+          <span class="font-bold">୨୧ Myself | </span>
+          <span>Everything that need to know about me.</span>
+        </div>
+        <div class={`m-3 h-0.5 divider`}> </div>
+        <span>About Me --- Blog --- Social</span>
+        <span>Scrapbook --- Story behind this site --- Graveyard</span>
+        <div class={`m-3 h-0.5 divider`}> </div>
+        <div class="inline">
+          <span class="font-bold">୨୧ Archive | </span>
+          <span>Everything that I want to keep to myself but also want to be public.</span>
+        </div>
+        <div class={`m-3 h-0.5 divider`}> </div>
+        <span>Download (FTP Server) --- Spotify/Apple Music Playlist</span>
+        <span>Schoolworks</span>
+        <div class={`m-3 h-0.5 divider`}> </div>
+        <div class="inline">
+          <span class="font-bold">୨୧ For you | </span>
+          <span>Maybe you will like this.</span>
+        </div>
+        <div class={`m-3 h-0.5 divider`}> </div>
+        <span>What the lyrics? --- 88x31 Button --- Pinterest</span>
+        <div class={`m-3 h-0.5 divider`}> </div>
+        <div class="inline">
+          <span class="font-bold">୨୧ Retro Site | </span>
+          <span>For anyone who likes retro stuff!</span>
+        </div>
+        <div class={`m-3 h-0.5 divider`}> </div>
+        <span>Wanna break for modern age, Click here to go to retro version of this site! (Not quite suitable with your phone!)</span>
+        <span>[Insert the logo here!]</span>
+        <div class={`m-3 h-0.5 divider`}> </div>
+        <div class="inline">
+          <span class="font-bold">୨୧ Collective | </span>
+          <span>Button linking to this (yep! that's toonstorytime.me) and other, including original one. and also some site that you should visit.</span>
+        </div>
+        <div class={`m-3 h-0.5 divider`}> </div>
+        <span>[Insert the logo here!]</span>
+      </div>
+    </div>
   </div>
 </div>
