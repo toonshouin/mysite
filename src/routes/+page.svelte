@@ -156,5 +156,7 @@ function toggleHiddenRow() {
       <span class="font-bold">Last Update ({commitDate}) : </span>
       <span><a href={commitURI}>{commitMessage}</a></span>
     </div>
+    <div class={`m-3 h-0.5 divider`}> </div>
+    
   </div>
 </div>
