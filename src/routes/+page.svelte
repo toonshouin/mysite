@@ -28,7 +28,7 @@
     },
   ]
 
-  const branch = 'v2-dev';  // specify the branch you want to fetch commits from
+  const branch = 'main';  // specify the branch you want to fetch commits from
   const owner = 'toonnongaeoy';
   const repo = 'mysite';
 
@@ -79,7 +79,7 @@
 // Fetch the latest commit message and date on component mount
 onMount(async () => {
     try {
-      // fetchRSSFeed();
+      fetchRSSFeed();
       const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/commits?sha=${branch}`);
       if (response.ok) {
         const data = await response.json();
@@ -126,8 +126,14 @@ function toggleHiddenRow() {
 	rgba(223, 152, 156, 1), rgba(255,0,0,0));
     }
 
-    @media (max-width: 430px) {
-        .webring-wrapper {
+    .menu a{
+        color: #890606;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    @media (max-width: 767px) {
+        #webring-wrapper {
             max-width: 50px;
         }
     }
@@ -180,11 +186,13 @@ function toggleHiddenRow() {
     <div class={`m-3 h-0.5 divider`}> </div>
     <div class="flex flex-row">
       <div class="flex flex-col items-center max-w-32 text-center mr-4">
-        <p>current feeling :</p>
-        <img src="https://moods.imood.com/display/uname-toonnongaeoy/fg-FFFFFF/trans-1/imood.gif" width="72" style="padding:3px; padding-bottom:5px; margin-bottom:1px; background-color: #e34c2d; border:3px double #FFF2C9;">
-        <div id="webring-wrapper" class="webring-wrapper">
+        <p>current feeling</p>
+        <a href="https://www.imood.com/users/toonnongaeoy">
+          <img src="https://moods.imood.com/display/uname-toonnongaeoy/fg-FFFFFF/trans-1/imood.gif" alt="iMood Emotes." width="72" style="padding:3px; padding-bottom:5px; margin-bottom:1px; background-color: #e34c2d; border:3px double #FFF2C9;">
+        </a>
+        <div id="webring-wrapper">
           <a href="https://webring.hackclub.com/" id="previousBtn" class="webring-anchor" title="Previous">‹</a>
-          <a href="https://webring.hackclub.com/" class="webring-logo" title="Hack Club Webring" alt="Hack Club Webring"></a>
+          <a href="https://webring.hackclub.com/" class="webring-logo" title="Hack Club Webring"> </a>
           <a href="https://webring.hackclub.com/" id="nextBtn" class="webring-anchor" title="Next">›</a>
         </div>
         <div class="flex flex-col mt-2 max-w-9">
@@ -194,29 +202,29 @@ function toggleHiddenRow() {
           </a>
         </div>
       </div>
-      <div class="flex flex-col mr-4">
+      <div class="flex flex-col mr-4 max-w-lg menu">
         <div class="inline">
           <span class="font-bold">୨୧ Myself | </span>
           <span>Everything that need to know about me.</span>
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
-        <span>About Me --- Blog --- Social</span>
-        <span>Scrapbook --- Story behind this site --- Graveyard</span>
+        <span><a href="/about">About Me</a> --- <a href="https://blog.toonstorytime.me">Blog</a> --- <a href="/elsewhere">Other ways to contact me</a></span>
+        <span><a href="https://scrapbook.toonstorytime.me">Scrapbook</a> --- <a href="https://blog.toonstorytime.me/posts/hc15d24-en">Story behind this site</a> --- <a href="/graves">Graveyard</a></span>
         <div class={`m-3 h-0.5 divider`}> </div>
         <div class="inline">
           <span class="font-bold">୨୧ Archive | </span>
           <span>Everything that I want to keep to myself but also want to be public.</span>
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
-        <span>Download (FTP Server) --- Spotify/Apple Music Playlist</span>
-        <span>Schoolworks</span>
+        <span><a href="https://ftp.toonstorytime.me">Download (FTP Server)</a> --- <a href="/samplaylist">Spotify/Apple Music Playlist</a></span>
+        <span><a href="/schoolworks">Schoolworks</a></span>
         <div class={`m-3 h-0.5 divider`}> </div>
         <div class="inline">
           <span class="font-bold">୨୧ For you | </span>
           <span>Maybe you will like this.</span>
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
-        <span>What the lyrics? --- 88x31 Button --- Pinterest</span>
+        <span><a href="https://wtlyrics.toonstorytime.me">What the lyrics?</a> --- <a href="/button">88x31 Button</a> --- <a href="https://go.toonstorytime.me/pinterest">Pinterest</a></span>
         <div class={`m-3 h-0.5 divider`}> </div>
         <div class="inline">
           <span class="font-bold">୨୧ Retro Site | </span>
