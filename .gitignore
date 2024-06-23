@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .DS_Store
 node_modules
 /build
@@ -8,3 +9,8 @@ node_modules
 !.env.example
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+=======
+.env
+.svelte-kit/
+node_modules/
+>>>>>>> 2abbf7890a8eec1aee8955dbcd2403ac95250231
