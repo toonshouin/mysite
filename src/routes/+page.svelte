@@ -1,6 +1,10 @@
 <script>
     import { fade } from 'svelte/transition';
     import { onMount } from 'svelte';
+	  import Layout from './+layout.svelte';
+
+    let title = ''; // Reactive variable for the dynamic title
+    const fullTitle = "ToonStoryTime (ToonNongAoey)'s Site"; // The full title you want to display
 
     let isVisible = false;
 
@@ -75,9 +79,37 @@
       date: formatDate(item.querySelector('pubDate')?.textContent ?? ''),
     }));
   }
+    /**
+    @param {number} i
+    */
 
-// Fetch the latest commit message and date on component mount
+  function typeTitle(i) {
+    if (i < fullTitle.length) {
+      title += fullTitle[i];
+      setTimeout(() => typeTitle(i + 1), 250); // Adjust the speed of typing here
+    } else {
+      // Wait a bit before starting to delete the title
+      setTimeout(() => deleteTitle(fullTitle.length - 1), 1000); // Adjust the pause duration here
+    }
+  }
+
+    /**
+    @param {number} i
+    */
+
+  function deleteTitle(i) {
+    if (i >= 1) {
+      title = title.substring(0, i);
+      setTimeout(() => deleteTitle(i - 1), 200); // Adjust the speed of deleting here
+    } else {
+      // Wait a bit before starting to type again
+      setTimeout(() => typeTitle(1)); // Adjust the pause before typing again
+    }
+  }
+
+// Fetch the latest   commit message and date on component mount
 onMount(async () => {
+    typeTitle(0);
     try {
       fetchRSSFeed();
       const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/commits?sha=${branch}`);
@@ -102,28 +134,23 @@ onMount(async () => {
     document.body.appendChild(script);
 
     // Return the cleanup function directly
-    return;
-  });
+    return; 
+  }
+);
 
 function toggleHiddenRow() {
   isVisible = !isVisible;
 }
 </script>
 
+<svelte:head>
+  <title>{title}</title>
+  <meta name="description" content="My personal site!">
+</svelte:head>
+
 <style>
     .container {
         padding: 2rem;
-    }
-
-    .link {
-        cursor: pointer;
-        color: blue;
-        text-decoration: underline;
-    }
-
-    .divider {
-    background-image : linear-gradient(to right, rgba(255,0,0,0), 
-	rgba(223, 152, 156, 1), rgba(255,0,0,0));
     }
 
     .menu a{
@@ -131,13 +158,20 @@ function toggleHiddenRow() {
         font-weight: bold;
         text-decoration: underline;
     }
+    .ma_bt {
+        margin-top: 3px;
+        color: #890606;
+        border: 3px double;
+    }
 
     @media (max-width: 767px) {
         #webring-wrapper {
             max-width: 50px;
         }
     }
-</style>  
+
+</style>
+
 <div class="flex justify-center" transition:fade>
   <div class="container mx-auto px-4">
     <div class="inline">
@@ -201,6 +235,9 @@ function toggleHiddenRow() {
             />
           </a>
         </div>
+        <div class="flex flex-col mt-2">
+          <a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-36734-04"><img alt="Guestbook" border="0" src="http://extras3.smartgb.com/b/gb_80x40.gif"></a>
+        </div>
       </div>
       <div class="flex flex-col mr-4 max-w-lg menu">
         <div class="inline">
@@ -232,14 +269,20 @@ function toggleHiddenRow() {
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
         <span>Wanna break for modern age, Click here to go to retro version of this site! (Not quite suitable with your phone!)</span>
-        <span>[Insert the logo here!]</span>
+        <a href="http://toonnongaeoy.dino.icu"><img src="retro.svg" alt="Back to retro site!" style="max-width: fit-content;" class="ma_bt"></a>
         <div class={`m-3 h-0.5 divider`}> </div>
         <div class="inline">
           <span class="font-bold">୨୧ Collective | </span>
           <span>Button linking to this (yep! that's toonstorytime.me) and other, including original one. and also some site that you should visit.</span>
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
-        <span>[Insert the logo here!]</span>
+        <p>
+          <a href="https://koinuko.pink"><img class="bto" src="button/koinuko2.gif" alt="My inspiration for all of it."></a>
+          <img class="bto" src="button/imissxp.gif" alt="The Windows Version that we loves the most before some company makes it worse!">
+          <a href="https://technologicalbyte.com"><img class="bto" src="button/tbsite.gif" alt="Inspired for my other site, You can visit this too!"></a>
+          <img class="bto" src="button/tst_old.gif" alt="This site that you currently visting rn.">
+          <a href="https://youtube.com/@toonstorytime"><img class="bto" src="button/youtube.gif" alt="Yeah, I'm on Youtube!"></a>
+        </p>
       </div>
     </div>
   </div>
