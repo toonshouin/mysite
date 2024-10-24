@@ -277,11 +277,11 @@ function toggleHiddenRow() {
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
         <p>
-          <a href="https://koinuko.pink"><img class="bto" src="button/koinuko2.gif" alt="My inspiration for all of it."></a>
-          <img class="bto" src="button/imissxp.gif" alt="The Windows Version that we loves the most before some company makes it worse!">
-          <a href="https://technologicalbyte.com"><img class="bto" src="button/tbsite.gif" alt="Inspired for my other site, You can visit this too!"></a>
-          <img class="bto" src="button/tst_old.gif" alt="This site that you currently visting rn.">
-          <a href="https://youtube.com/@toonstorytime"><img class="bto" src="button/youtube.gif" alt="Yeah, I'm on Youtube!"></a>
+          <a href="https://koinuko.pink"><img class="bto" src="button/koinuko2.gif" alt="My inspiration for all of it." title="My inspiration for all of it."></a>
+          <img class="bto" src="button/imissxp.gif" alt="The Windows Version that we loves the most before some company makes it worse!" title="The Windows Version that we loves the most before some company makes it worse!">
+          <a href="https://technologicalbyte.com"><img class="bto" src="button/tbsite.gif" alt="Inspired for my other site, You can visit this too!" title="Inspired for my other site, You can visit this too!"></a>
+          <img class="bto" src="button/tst_old.gif" alt="This site that you currently visting rn." title="This site that you currently visting rn.">
+          <a href="https://youtube.com/@toonstorytime"><img class="bto" src="button/youtube.gif" alt="Yeah, I'm on Youtube!" title="Yeah, I'm on Youtube!"></a>
         </p>
       </div>
     </div>
