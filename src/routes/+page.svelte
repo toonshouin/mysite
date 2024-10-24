@@ -245,16 +245,19 @@ function toggleHiddenRow() {
           <span>Everything that need to know about me.</span>
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
-        <span><a href="/about">About Me</a> --- <a href="https://blog.toonstorytime.me">Blog</a> --- <a href="/elsewhere">Other ways to contact me</a></span>
-        <span><a href="https://scrapbook.toonstorytime.me">Scrapbook</a> --- <a href="https://blog.toonstorytime.me/posts/hc15d24-en">Story behind this site</a> --- <a href="/graves">Graveyard</a></span>
+        <span><a href="/about">About Me</a> --- <a href="https://blog.toonstorytime.me">Blog</a> --- <a href="/elsewhere">Contact</a> --- <a href="https://scrapbook.toonstorytime.me">Scrapbook</a></span>
+        <span>&nbsp;</span>
+        <span class="font-bold">Website Related.</span>
+        <div class={`m-0.5 h-0.5`}> </div>
+        <span><a href="https://blog.toonstorytime.me/posts/hc15d24-en">Story behind this site</a></span>
         <div class={`m-3 h-0.5 divider`}> </div>
         <div class="inline">
           <span class="font-bold">୨୧ Archive | </span>
           <span>Everything that I want to keep to myself but also want to be public.</span>
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
-        <span><a href="https://ftp.toonstorytime.me">Download (FTP Server)</a> --- <a href="/samplaylist">Spotify/Apple Music Playlist</a></span>
-        <span><a href="/schoolworks">Schoolworks</a></span>
+        <span><a href="https://ftp.toonstorytime.me">Download (FTP Server)</a> --- <a href="/playlist">Music Playlist</a> --- <a href="/schoolworks">Schoolworks</a></span>
+        <span><a href="/graves">Graveyard</a></span>
         <div class={`m-3 h-0.5 divider`}> </div>
         <div class="inline">
           <span class="font-bold">୨୧ For you | </span>
