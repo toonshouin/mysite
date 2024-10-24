@@ -7,7 +7,6 @@
         padding: 2rem;
     }
 
-
     a {
 		color: #890606;
 		font-weight: bold;
