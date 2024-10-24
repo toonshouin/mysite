@@ -7,11 +7,6 @@
         padding: 2rem;
     }
 
-    .link {
-        cursor: pointer;
-        color: blue;
-        text-decoration: underline;
-    }
 
     a {
 		color: #890606;
