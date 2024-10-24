@@ -269,7 +269,11 @@ function toggleHiddenRow() {
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
         <span>Wanna break for modern age, Click here to go to retro version of this site! (Not quite suitable with your phone!)</span>
-        <a href="http://toonnongaeoy.dino.icu"><img src="retro.svg" alt="Back to retro site!" style="max-width: fit-content;" class="ma_bt"></a>
+        <p class="max-w-fit">
+          <a href="http://toonnongaeoy.dino.icu" style="display: block; width: 100%;">
+            <img src="retro.svg" alt="Back to retro site!" style="max-width: fit-content;" class="ma_bt">
+          </a>
+        </p>
         <div class={`m-3 h-0.5 divider`}> </div>
         <div class="inline">
           <span class="font-bold">୨୧ Collective | </span>
