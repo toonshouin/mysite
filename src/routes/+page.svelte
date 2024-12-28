@@ -176,7 +176,7 @@ function toggleHiddenRow() {
   <div class="container mx-auto px-4">
     <div class="inline">
       <span class="text-3xl font-bold">Hi! 👋</span>
-      <span class="text-xl">ToonStoryTime (ToonNongAeoy) have been reconstruct this site recently! And (almost) finally ready to operate again!</span>
+      <span class="text-xl">ToonStoryTime (ToonNongAeoy) have been reconstruct this site recently! And finally ready to operate again!</span>
       <span role="button" on:click={toggleHiddenRow} on:keydown={handleKeydown} class="cursor-pointer" tabindex="0">(Click here to read about the changes.)</span>
     </div>
     <div id="st" class={`mt-2 mb-2 ${isVisible ? 'block' : 'hidden'}`}>
@@ -245,16 +245,19 @@ function toggleHiddenRow() {
           <span>Everything that need to know about me.</span>
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
-        <span><a href="/about">About Me</a> --- <a href="https://blog.toonstorytime.me">Blog</a> --- <a href="/elsewhere">Other ways to contact me</a></span>
-        <span><a href="https://scrapbook.toonstorytime.me">Scrapbook</a> --- <a href="https://blog.toonstorytime.me/posts/hc15d24-en">Story behind this site</a> --- <a href="/graves">Graveyard</a></span>
+        <span><a href="/about">About Me</a> --- <a href="https://blog.toonstorytime.me">Blog</a> --- <a href="/elsewhere">Contact</a> --- <a href="https://scrapbook.toonstorytime.me">Scrapbook</a></span>
+        <span>&nbsp;</span>
+        <span class="font-bold">Website Related.</span>
+        <div class={`m-0.5 h-0.5`}> </div>
+        <span><a href="https://blog.toonstorytime.me/posts/hc15d24-en">Story behind this site</a></span>
         <div class={`m-3 h-0.5 divider`}> </div>
         <div class="inline">
           <span class="font-bold">୨୧ Archive | </span>
           <span>Everything that I want to keep to myself but also want to be public.</span>
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
-        <span><a href="https://ftp.toonstorytime.me">Download (FTP Server)</a> --- <a href="/samplaylist">Spotify/Apple Music Playlist</a></span>
-        <span><a href="/schoolworks">Schoolworks</a></span>
+        <span><a href="https://ftp.toonstorytime.me">Download (FTP Server)</a> --- <a href="/playlist">Music Playlist</a> --- <a href="/schoolworks">Schoolworks</a></span>
+        <span><a href="/graves">Graveyard</a></span>
         <div class={`m-3 h-0.5 divider`}> </div>
         <div class="inline">
           <span class="font-bold">୨୧ For you | </span>
@@ -269,7 +272,11 @@ function toggleHiddenRow() {
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
         <span>Wanna break for modern age, Click here to go to retro version of this site! (Not quite suitable with your phone!)</span>
-        <a href="http://toonnongaeoy.dino.icu"><img src="retro.svg" alt="Back to retro site!" style="max-width: fit-content;" class="ma_bt"></a>
+        <p class="max-w-fit">
+          <a href="http://toonnongaeoy.dino.icu" style="display: block; width: 100%;">
+            <img src="retro.svg" alt="Back to retro site!" style="max-width: fit-content;" class="ma_bt">
+          </a>
+        </p>
         <div class={`m-3 h-0.5 divider`}> </div>
         <div class="inline">
           <span class="font-bold">୨୧ Collective | </span>
@@ -277,11 +284,11 @@ function toggleHiddenRow() {
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
         <p>
-          <a href="https://koinuko.pink"><img class="bto" src="button/koinuko2.gif" alt="My inspiration for all of it."></a>
-          <img class="bto" src="button/imissxp.gif" alt="The Windows Version that we loves the most before some company makes it worse!">
-          <a href="https://technologicalbyte.com"><img class="bto" src="button/tbsite.gif" alt="Inspired for my other site, You can visit this too!"></a>
-          <img class="bto" src="button/tst_old.gif" alt="This site that you currently visting rn.">
-          <a href="https://youtube.com/@toonstorytime"><img class="bto" src="button/youtube.gif" alt="Yeah, I'm on Youtube!"></a>
+          <a href="https://koinuko.pink"><img class="bto" src="button/koinuko2.gif" alt="My inspiration for all of it." title="My inspiration for all of it."></a>
+          <img class="bto" src="button/imissxp.gif" alt="The Windows Version that we loves the most before some company makes it worse!" title="The Windows Version that we loves the most before some company makes it worse!">
+          <a href="https://technologicalbyte.com"><img class="bto" src="button/tbsite.gif" alt="Inspired for my other site, You can visit this too!" title="Inspired for my other site, You can visit this too!"></a>
+          <img class="bto" src="button/tst_old.gif" alt="This site that you currently visting rn." title="This site that you currently visting rn.">
+          <a href="https://youtube.com/@toonstorytime"><img class="bto" src="button/youtube.gif" alt="Yeah, I'm on Youtube!" title="Yeah, I'm on Youtube!"></a>
         </p>
       </div>
     </div>
