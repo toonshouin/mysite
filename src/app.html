@@ -16,7 +16,7 @@
 		<footer class="flex justify-center">
 			<div class="justify-center text-center mt-5 w-11/12 max-w-3xl">
 			<p>
-				★ 2013 - 2024 StoryHouse Production ★ 
+				★ 2013 - <span id="current-year"></span> <a href="https://storyhouse.vercel.app">StoryHouse</a> ★ 
 				v2 layout since 23.06.24 // prev: <a href="https://v1.toonstorytime.me">v1 (Whistler)</a> ★<br>
 				mail to <a href="mailto:contact@toonstorytime.me"><b>contact (at) toonstorytime.me!</b></a>
 			</p>
@@ -27,5 +27,8 @@
 			</p>
 		</div>
 		</footer>
+		<script>
+			document.getElementById('current-year').textContent = new Date().getFullYear();
+		</script>
 	</body>
 </html>
