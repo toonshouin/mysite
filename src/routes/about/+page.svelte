@@ -67,11 +67,11 @@ onMount(async () => {
     <div class={`m-3 h-0.5 divider`}> </div>
     <img src="tna_event24.avif" alt="ToonAoeychi in 2024.">
     <div class={`m-3 h-0.5 divider`}> </div>
-    <p>A 17 years old kids in Thailand studying 3rd Year Vocational Certificate in Computer Business
+    <p>A 18 years old kids in Thailand finished Vocational Certificate in Computer Business
         at Dusit Commercial Nonthaburi Vocational College that Interested in Web Developing,
         starting from want to be Computer Technician to Dev-Ops Web Developer and (almost) learn by himself.
         Even through sometime thought he is a girl or maybe a LGBTQ+ but in reality. He just a boy.
-        Currently, he is a member of Hack Club and also Genxl at Chonburi, Thailand.
+        Currently, he is a member of <a href="https://hackclub.com">Hack Club</a> and also <a href="https://gnxl.org">Genxl</a> at Chonburi, Thailand.
     </p>
     <br>
     <div class="inline">

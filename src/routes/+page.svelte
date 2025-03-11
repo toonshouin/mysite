@@ -256,7 +256,7 @@ function toggleHiddenRow() {
           <span>Everything that I want to keep to myself but also want to be public.</span>
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
-        <span><a href="https://ftp.toonstorytime.me">Download (FTP Server)</a> --- <a href="/playlist">Music Playlist</a> --- <a href="/schoolworks">Schoolworks</a></span>
+        <span><a href="https://ftp.toonstorytime.me">Download (FTP Server)</a> --- <a href="/playlist">Music Playlist</a> --- <a href="https://youtube.com/@AoeyHomework">Schoolworks</a></span>
         <span><a href="/graves">Graveyard</a></span>
         <div class={`m-3 h-0.5 divider`}> </div>
         <div class="inline">
