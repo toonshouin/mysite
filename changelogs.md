@@ -27,4 +27,11 @@ Avalible for archive at [v1.toonstorytime.me](https://v1.toonstorytime.me)
 - Fetch RSS Feed
 - Updated Realtime Subscriber count with Secure API Method.
 
-*Codename may be change in the future.
+## Version 2.0.1 (koinuko*)
+- Updated to TailwindCSS 4 and Svelte 5
+- Updated About me & Footer
+- Updated DevContainer (GitHub Codespaces)
+- Edit .gitignore (after it broke my env serval times)
+- Moved to inline css to .scss
+---
+##### * Codename may be change in the future.
