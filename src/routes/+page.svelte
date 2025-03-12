@@ -1,7 +1,7 @@
 <script>
     import { fade } from 'svelte/transition';
     import { onMount } from 'svelte';
-	  import Layout from './+layout.svelte';
+    import Amplitude from '$lib/components/amplitude.svelte';
 
     let title = ''; // Reactive variable for the dynamic title
     const fullTitle = "ToonStoryTime (ToonNongAoey)'s Site"; // The full title you want to display
@@ -200,13 +200,7 @@ function toggleHiddenRow() {
     <div class={`m-3 h-0.5 divider`}> </div>
     <div class="flex flex-row justify-center">
       <div class="flex flex-col justify-center items-center text-center mr-4">
-        <span>Since koinuko closed her Webring, and I forget the password. And it should be her webring here. So, enjoy my blog updates instead!</span>
-        <span>&nbsp;</span>
-        {#each feed as { title, link, date }}
-        <div>
-          <a href="{link}" target="_blank"><b>{date} :</b> {title}</a>
-        </div>
-      {/each}
+        <Amplitude />
       </div>
     </div>
     <div class={`m-3 h-0.5 divider`}> </div>
