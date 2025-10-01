@@ -63,12 +63,12 @@ onMount(async () => {
         <span class="text-3xl font-bold">Hi! 👋</span>
         <span class="text-2xl">I'm Kritthapath Yaviraj!</span>
     </div>
-    <p>or you also may know me as CartoonGamerTeamThai , CartoonLovePangKung , ToonWannaMoveOn , ToonStoryTime , ToonNongAeoy and latest name. ToonAoeychi!</p>
+    <p>or you also may know me as CartoonGamerTeamThai , CartoonLovePangKung , ToonWannaMoveOn , ToonStoryTime , ToonNongAeoy , ToonOeichi and latest name, Toonshouin! (that's why I registered toonshou.in!)</p>
     <div class={`m-3 h-0.5 divider`}> </div>
     <img src="tna_event24.avif" alt="ToonAoeychi in 2024.">
     <div class={`m-3 h-0.5 divider`}> </div>
-    <p>A 18 years old kids in Thailand finished Vocational Certificate in Computer Business
-        at Dusit Commercial Nonthaburi Vocational College that Interested in Web Developing,
+    <p>A 18 years old kids in Thailand studying Higher Vocational Certificate in Information Technology
+        at <a href="https://www3.pongsawadi.ac.th/psc2023">Pongsawadi Technological College</a> that Interested in Web Developing,
         starting from want to be Computer Technician to Dev-Ops Web Developer and (almost) learn by himself.
         Even through sometime thought he is a girl or maybe a LGBTQ+ but in reality. He just a boy.
         Currently, he is a member of <a href="https://hackclub.com">Hack Club</a> and also <a href="https://gnxl.org">Genxl</a> at Chonburi, Thailand.
