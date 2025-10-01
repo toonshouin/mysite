@@ -1,7 +1,6 @@
 <script>
     import { fade } from 'svelte/transition';
     import { onMount } from 'svelte';
-	  import Layout from './+layout.svelte';
 
     let title = ''; // Reactive variable for the dynamic title
     const fullTitle = "Toonshouin's Site"; // The full title you want to display
@@ -255,7 +254,7 @@ function toggleHiddenRow() {
           <span>Everything that I want to keep to myself but also want to be public.</span>
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
-        <p><a href="https://ftp.toonstorytime.me">Download (FTP Server)</a></p>
+        <p><a href="#fixing">Download (FTP Server) [Broken]</a></p>
         <p><a href="/playlist">Music Playlist</a></p>
         <p><a href="https://youtube.com/@AoeyHomework">Schoolworks</a></p>
         <span><a href="/graves">Graveyard</a></span>
@@ -265,7 +264,7 @@ function toggleHiddenRow() {
           <span>Maybe you will like this.</span>
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
-        <p><a href="https://wtlyrics.toonstorytime.me">What the lyrics?</a></p>
+        <p><a href="https://wtlyr.toonshou.in">What the lyrics?</a></p>
         <p><a href="/button">88x31 Button</a></p>
         <p><a href="https://pin.aoeyoei.xyz">Pinterest</a></p>
         <div class={`m-3 h-0.5 divider`}> </div>
@@ -276,7 +275,7 @@ function toggleHiddenRow() {
         <div class={`m-3 h-0.5 divider`}> </div>
         <span>Wanna break for modern age, Click here to go to retro version of this site! (Not quite suitable with your phone!)</span>
         <p class="max-w-fit">
-          <a href="http://toonnongaeoy.dino.icu" style="display: block; width: 100%;">
+          <a href="http://legacy.toonshou.in" style="display: block; width: 100%;">
             <img src="retro.svg" alt="Back to retro site!" style="max-width: fit-content;" class="ma_bt">
           </a>
         </p>
@@ -290,7 +289,6 @@ function toggleHiddenRow() {
           <a href="https://koinuko.pink"><img class="bto" src="button/koinuko2.gif" alt="My inspiration for all of it." title="My inspiration for all of it."></a>
           <img class="bto" src="button/imissxp.gif" alt="The Windows Version that we loves the most before some company makes it worse!" title="The Windows Version that we loves the most before some company makes it worse!">
           <a href="https://technologicalbyte.com"><img class="bto" src="button/tbsite.gif" alt="Inspired for my other site, You can visit this too!" title="Inspired for my other site, You can visit this too!"></a>
-          <img class="bto" src="button/tst_old.gif" alt="This site that you currently visting rn." title="This site that you currently visting rn.">
           <a href="https://youtube.com/@toonstorytime"><img class="bto" src="button/youtube.gif" alt="Yeah, I'm on Youtube!" title="Yeah, I'm on Youtube!"></a>
         </p>
       </div>
