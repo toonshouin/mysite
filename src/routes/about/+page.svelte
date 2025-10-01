@@ -3,7 +3,7 @@
     import { onMount } from 'svelte';
 
     let title = ''; // Reactive variable for the dynamic title
-    const fullTitle = "About Me | ToonStoryTime (ToonNongAoey)'s Site"; // The full title you want to display
+    const fullTitle = "About Me | Toonshouin's Site"; // The full title you want to display
 
     /**
     @param {number} i
@@ -76,19 +76,19 @@ onMount(async () => {
     <br>
     <div class="inline">
         <span>For more detail about my education, you can visit my resume,</span>
-        <a href="https://resume.toonstorytime.me"><span class="font-bold">Here!</span></a>
+        <a href="https://resume.toonshou.in"><span class="font-bold">Here!</span></a>
     </div>
     <div class={`m-3 h-0.5 divider`}> </div>
         <div class="flex flex-row">
-            <div class="flex flex-col max-w-sm w-full pr-2.5                                                                ">
+            <div class="flex flex-col max-w-sm w-full pr-2.5">
                 <span class="text-3xl text-bold">Projects</span>
-                <span>- <a href="#here">Main site (toonstorytime.me)</a> My personal site</span>
-                <span>- <a href="http://toonnongaeoy.dino.icu">Other Site (toonnongaeoy.dino.icu)</a> My retro site based on <a href="https://koinuko.pink" style="color: black;">koinuko.pink</a> v.5 and 6</span>
-                <span>- <a href="https://blog.toonstorytime.me">Blog Site</a> My blog site</span>
-                <span>- <a href="https://tree.toonstorytime.me">Tree's Site</a> My linktree.</span>
-                <span>- <a href="https://wtlyrics.toonstorytime.me">What the Lyrics?</a> My lyrics site with all the weird , dirty , and everything that possible in the Lyrics!</span>
-                <span>- <a href="https://github.com/toonnongaeoy/rosepine-discord-newthemes">Rosé Pine for Discord (But in diffrent fonts)</a> Yeah, like the name suggest, and also add Rosé Pine Moon (that I like.)</span>
+                <span>- <a href="#here">Main site (toonshou.in)</a> My personal site</span>
+                <span>- <a href="http://legacy.toonshou.in">Other Site (toonnongaeoy.dino.icu | legacy.toonshou.in)</a> My retro site based on <a href="https://koinuko.pink" style="color: black;">koinuko.pink</a> v.5 and 6</span>
+                <span>- <a href="https://blog.toonshou.in">Blog Site</a> My blog site</span>
+                <span>- <a href="https://card.toonshou.in">Carrd's Site</a> My recreation of linktree + carrd.co look like.</span>
+                <span>- <a href="https://wtlyr.toonshou.in">What the Lyrics?</a> My lyrics site with all the weird , dirty , and everything that possible in the Lyrics!</span>
                 <span>- <a href="https://thai.hackclub.com">Hack Club Thai Translation Site.</a> Yeah, contribute on <a href="https://github.com/hackclub/global" style="color: black;">hackclub/global</a></span>
+                <span>- <a href="https://github.com/toonshouin/project-secret">Project Secret</a> Game project that power minigames from #17ynromeiio Project.</span>
             </div>
             <div class="flex flex-col max-w-sm w-full">
                 <span class="text-3xl text-bold">Tools</span>
@@ -133,7 +133,7 @@ onMount(async () => {
         </div>
         <br>
         <div class={`m-3 h-0.5 divider`}> </div>
-        <p class="text-center">If you like to contact me (for some reason), you can contact me on <a href="mailto:kritthapath@toonstorytime.me">kritthapath (at) toonstorytime.me</a>. And I always check my inbox. So I will reply you with in 1 - 2 day!
+        <p class="text-center">If you like to contact me (for some reason), you can contact me on <a href="mailto:me@toonshou.in">me (at) toonshou (dot) in</a>. And I always check my inbox. So I will reply you with in 1 - 2 day!
         <div class={`m-3 h-0.5 divider`}> </div>
     <a href="./"><p class="text-center">Back on homepage.</p></a>
 </div>
