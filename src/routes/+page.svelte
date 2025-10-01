@@ -4,7 +4,7 @@
 	  import Layout from './+layout.svelte';
 
     let title = ''; // Reactive variable for the dynamic title
-    const fullTitle = "ToonStoryTime (ToonNongAoey)'s Site"; // The full title you want to display
+    const fullTitle = "Toonshouin's Site"; // The full title you want to display
 
     let isVisible = false;
 
@@ -20,10 +20,10 @@
 
   let commitMessage = 'Loading...';
   let commitDate = '';
-  let commitURI = 'https://github.com/toonnongaeoy/mysite'
-  $: commitGUI_URI = `https://github.com/toonnongaeoy/${repo}/commits/${branch}`;
-  let commitUser_URI = 'https://github.com/toonnongaeoy';
-  let commitUser = 'toonnongaeoy';
+  $: commitURI = `https://github.com/${commitUser}/${repo}`
+  $: commitGUI_URI = `https://github.com/${commitUser}/${repo}/commits/${branch}`;
+  $: commitUser_URI = `https://github.com/${commitUser}`;
+  let commitUser = 'toonshouin';
   let feed = [
     {
       "title": "Do you remember? The 21st night of September?",
@@ -33,7 +33,7 @@
   ]
 
   const branch = 'main';  // specify the branch you want to fetch commits from
-  const owner = 'toonnongaeoy';
+  const owner = 'toonshouin';
   const repo = 'mysite';
 
     // Function to format date to DD/MM/YYYY
@@ -49,7 +49,7 @@
   }
 
   async function fetchRSSFeed() {
-    const feedUrl = 'https://blog.toonstorytime.me/rss.xml';
+    const feedUrl = 'https://blog.toonshou.in/rss.xml';
     const response = await fetch(feedUrl);
     const text = await response.text();
     feed = parseXMLToJSON(text);
@@ -176,7 +176,7 @@ function toggleHiddenRow() {
   <div class="container mx-auto px-4">
     <div class="inline">
       <span class="text-3xl font-bold">Hi! 👋</span>
-      <span class="text-xl">ToonStoryTime (ToonNongAeoy) have been reconstruct this site recently! And finally ready to operate again!</span>
+      <span class="text-xl">Toonshouin have been reconstruct this site recently! And finally ready to operate again!</span>
       <span role="button" on:click={toggleHiddenRow} on:keydown={handleKeydown} class="cursor-pointer" tabindex="0">(Click here to read about the changes.)</span>
     </div>
     <div id="st" class={`mt-2 mb-2 ${isVisible ? 'block' : 'hidden'}`}>
@@ -185,7 +185,7 @@ function toggleHiddenRow() {
 				You may have noticed, It looks like my old site that I do previously,
         Yep. And this is what's I want to be like. You can think a moden version of it.
         And also, I want to make this kind of site,
-        (And I already mention on my another site on <a href="http://toonnongaeoy.dino.icu">toonnongaeoy.dino.icu</a> 
+        (And I already mention on my another site on <a href="http://legacy.toonshou.in">legacy.toonshou.in</a> 
         if you doesn't read it already.)&nbsp;
       </p>
       <br>
@@ -200,13 +200,13 @@ function toggleHiddenRow() {
     <div class={`m-3 h-0.5 divider`}> </div>
     <div class="flex flex-row justify-center">
       <div class="flex flex-col justify-center items-center text-center mr-4">
-        <span>Since koinuko closed her Webring, and I forget the password. And it should be her webring here. So, enjoy my blog updates instead!</span>
-        <span>&nbsp;</span>
-        {#each feed as { title, link, date }}
-        <div>
-          <a href="{link}" target="_blank"><b>{date} :</b> {title}</a>
-        </div>
-      {/each}
+          <span class="menu">If you visited toonstorytime.me and returned to toonshou.in! that mean you visit via old domain that I will removed on 11th November 2025 <a href="https://github.com/toonshouin/site-status/issues/539">Click here to learn more!</a></span>
+          <span>&nbsp;</span>
+          {#each feed as { title, link, date }}
+            <div>
+              <a href="{link}" target="_blank"><b>{date} :</b> {title}</a>
+            </div>
+          {/each}
       </div>
     </div>
     <div class={`m-3 h-0.5 divider`}> </div>
@@ -245,18 +245,19 @@ function toggleHiddenRow() {
           <span>Everything that need to know about me.</span>
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
-        <span><a href="/about">About Me</a> --- <a href="https://blog.toonstorytime.me">Blog</a> --- <a href="/elsewhere">Contact</a> --- <a href="https://scrapbook.toonstorytime.me">Scrapbook</a></span>
-        <span>&nbsp;</span>
-        <span class="font-bold">Website Related.</span>
-        <div class={`m-0.5 h-0.5`}> </div>
-        <span><a href="https://blog.toonstorytime.me/posts/hc15d24-en">Story behind this site</a></span>
+        <p><a href="/about">About Me</a></p>
+        <p><a href="https://blog.toonshou.in">Blog</a></p>
+        <p><a href="/elsewhere">Contact</a></p>
+        <p><a href="#broke">Scrapbook (Broken)</a></p>
         <div class={`m-3 h-0.5 divider`}> </div>
         <div class="inline">
           <span class="font-bold">୨୧ Archive | </span>
           <span>Everything that I want to keep to myself but also want to be public.</span>
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
-        <span><a href="https://ftp.toonstorytime.me">Download (FTP Server)</a> --- <a href="/playlist">Music Playlist</a> --- <a href="https://youtube.com/@AoeyHomework">Schoolworks</a></span>
+        <p><a href="https://ftp.toonstorytime.me">Download (FTP Server)</a></p>
+        <p><a href="/playlist">Music Playlist</a></p>
+        <p><a href="https://youtube.com/@AoeyHomework">Schoolworks</a></p>
         <span><a href="/graves">Graveyard</a></span>
         <div class={`m-3 h-0.5 divider`}> </div>
         <div class="inline">
@@ -264,7 +265,9 @@ function toggleHiddenRow() {
           <span>Maybe you will like this.</span>
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
-        <span><a href="https://wtlyrics.toonstorytime.me">What the lyrics?</a> --- <a href="/button">88x31 Button</a> --- <a href="https://go.toonstorytime.me/pinterest">Pinterest</a></span>
+        <p><a href="https://wtlyrics.toonstorytime.me">What the lyrics?</a></p>
+        <p><a href="/button">88x31 Button</a></p>
+        <p><a href="https://pin.aoeyoei.xyz">Pinterest</a></p>
         <div class={`m-3 h-0.5 divider`}> </div>
         <div class="inline">
           <span class="font-bold">୨୧ Retro Site | </span>
