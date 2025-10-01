@@ -129,7 +129,7 @@ onMount(async () => {
       commitDate = '';
     }
     const script = document.createElement('script');
-    script.src = 'https://webring.hackclub.com/embed.min.js';
+    script.src = 'https://webring.hackclub.com/embed.js';
     script.async = true;
     document.body.appendChild(script);
 
