@@ -206,6 +206,7 @@ function toggleHiddenRow() {
               <a href="{link}" target="_blank"><b>{date} :</b> {title}</a>
             </div>
           {/each}
+        <Amplitude />
       </div>
     </div>
     <div class={`m-3 h-0.5 divider`}> </div>
