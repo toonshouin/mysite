@@ -229,7 +229,7 @@ function toggleHiddenRow() {
           <a href="https://webring.hackclub.com/" id="nextBtn" class="webring-anchor" title="Next">›</a>
         </div>
         <div class="flex flex-col mt-2 max-w-9">
-          <a href="https://webring.wonderful.software#toonstorytime.me" title="วงแหวนเว็บ">
+          <a href="https://webring.wonderful.software#toonshou.in" title="วงแหวนเว็บ">
             <img alt="วงแหวนเว็บ" src="https://webring.wonderful.software/webring.svg"
             />
           </a>
