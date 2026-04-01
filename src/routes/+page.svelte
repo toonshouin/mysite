@@ -1,6 +1,7 @@
 <script>
     import { fade } from 'svelte/transition';
     import { onMount } from 'svelte';
+    import HCWebring from '$lib/components/webring/hackclub.svelte';
 
     let title = ''; // Reactive variable for the dynamic title
     const fullTitle = "Toonshouin's Site"; // The full title you want to display
@@ -127,13 +128,6 @@ onMount(async () => {
       commitMessage = 'Error fetching commit data';
       commitDate = '';
     }
-    const script = document.createElement('script');
-    script.src = 'https://webring.hackclub.com/embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    // Return the cleanup function directly
-    return; 
   }
 );
 
@@ -162,13 +156,6 @@ function toggleHiddenRow() {
         color: #890606;
         border: 3px double;
     }
-
-    @media (max-width: 767px) {
-        #webring-wrapper {
-            max-width: 50px;
-        }
-    }
-
 </style>
 
 <div class="flex justify-center" transition:fade>
@@ -223,11 +210,7 @@ function toggleHiddenRow() {
         <a href="https://www.imood.com/users/toonnongaeoy">
           <img src="https://moods.imood.com/display/uname-toonnongaeoy/fg-FFFFFF/trans-1/imood.gif" alt="iMood Emotes." width="72" style="padding:3px; padding-bottom:5px; margin-bottom:1px; background-color: #e34c2d; border:3px double #FFF2C9;">
         </a>
-        <div id="webring-wrapper">
-          <a href="https://webring.hackclub.com/" id="previousBtn" class="webring-anchor" title="Previous">‹</a>
-          <a href="https://webring.hackclub.com/" class="webring-logo" title="Hack Club Webring"> </a>
-          <a href="https://webring.hackclub.com/" id="nextBtn" class="webring-anchor" title="Next">›</a>
-        </div>
+        <div class="my-1"><HCWebring /></div>
         <div class="flex flex-col mt-2 max-w-9">
           <a href="https://webring.wonderful.software#toonshou.in" title="วงแหวนเว็บ">
             <img alt="วงแหวนเว็บ" src="https://webring.wonderful.software/webring.svg"
@@ -275,8 +258,8 @@ function toggleHiddenRow() {
         <div class={`m-3 h-0.5 divider`}> </div>
         <span>Wanna break for modern age, Click here to go to retro version of this site! (Not quite suitable with your phone!)</span>
         <p class="max-w-fit">
-          <a href="http://legacy.toonshou.in" style="display: block; width: 100%;">
-            <img src="retro.svg" alt="Back to retro site!" style="max-width: fit-content;" class="ma_bt">
+          <a href="http://legacy.toonshou.in">
+            <img src="retro.svg" alt="Back to retro site!" class="ma_bt">
           </a>
         </p>
         <div class={`m-3 h-0.5 divider`}> </div>
