@@ -174,19 +174,18 @@
 				<span class="text-2xl font-bold">Other</span>
 			</div>
 		</div>
-		<h2 class="text-2xl font-bold"><a href="mailto:me@toonshou.in">E-mail</a></h2>
+		<h2 class="text-2xl font-bold"><a href="#email">E-mail</a></h2>
 		<p>
 			&emsp;- There is a pretty simple thing that you can use to contact me, <b
 				><i>(or you tell me you don't have any e-mail.)</i></b
 			>
-			You can send me to this e-mail <b><u>me (at) toonshou (dot) in</u></b> And I always check
-			my inbox. So I will reply you with in 1 - 2 day.
+			But since I hosted it myself, and I don't have much money to pay for the server (yet,) so right now, it unavailable for a while, but you can try to contact me via other ways than this!
 		</p>
 		<h2 class="text-2xl font-bold">
-			<a href="https://hackclub.com/slack/?event=oeichi-room">Hack Club Slack</a>
+			Hack Club Slack
 		</h2>
 		<p>
-			&emsp;- If you are teenagers like me who like to code or thinkering. You can join us here.
+			&emsp;- The way for teenager that interested in programming and tinkering to talk to each other, but due to slow, non-maintence and other makes me want to leave it <b>(In fact, right now I can't even access their new auth anymore)</b>, I still online via my phone, but I don't know when I will lost touch with it, so right now I recommend to talk to me via other ways than this, but if you want to, try ping me via other place or via Slack (@toonshouin) and maybe I will reply you if I still access it.
 		</p>
 		<div class={`m-3 h-0.5 divider`}></div>
 		<a href="./"><p class="text-center">Back on homepage.</p></a>
